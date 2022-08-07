@@ -1,8 +1,8 @@
 {
-  "name": "primeagen-searcher",
+  "name": "genius_list",
   "version": "1.0.0",
   "private": true,
-  "description": "primeagen-searcher",
+  "description": "genius_list",
   "author": "jay",
   "keywords": [
     "gatsby"
