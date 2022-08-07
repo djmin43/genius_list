@@ -6,12 +6,10 @@ require("dotenv").config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `primeagen-searcher`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `genius_list`,
+    description: `this is a list of geniuses`,
+    siteUrl: `https://geniuslist.gatsbyjs.io//`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
     {
@@ -19,6 +17,12 @@ const config: GatsbyConfig = {
       options: {
         accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/favicon.svg",
       },
     },
     "gatsby-plugin-image",

@@ -15,7 +15,7 @@ This is a genius list. A list of geniuses who change the world.
 
 ## Link
 
-**Link:** https://geniuslistmaster.gatsbyjs.io/
+**Link:** https://geniuslist.gatsbyjs.io/
 
 
 ## Run Locally
