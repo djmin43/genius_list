@@ -13,6 +13,11 @@ This is a genius list. A list of geniuses who change the world.
 **Deployment:** Gatsby Cloud
 
 
+## Link
+
+**Link:** https://geniuslistmaster.gatsbyjs.io/
+
+
 ## Run Locally
 
 Clone the project
