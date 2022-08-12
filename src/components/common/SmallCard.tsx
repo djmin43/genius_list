@@ -1,10 +1,10 @@
 import React from "react";
 import { styled } from "gatsby-theme-stitches/src/config";
-import { IProgrammer } from "../../types/programmer";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import ProgrammerFragment = Queries.ProgrammerFragment;
 
 interface CardProps {
-  programmerData: IProgrammer;
+  programmerData: ProgrammerFragment;
 }
 
 const SmallCard = ({ programmerData }: CardProps) => {
@@ -12,7 +12,7 @@ const SmallCard = ({ programmerData }: CardProps) => {
 
   return (
     <CardContainer>
-      <GatsbyImage alt={programmerData.name} image={image} />
+      <GatsbyImage alt={programmerData.name as string} image={image} />
       <ProgrammerName>
         <h3>{programmerData.name}</h3>
       </ProgrammerName>

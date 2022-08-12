@@ -1,13 +1,12 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import { IProgrammer } from "../types/programmer";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Layout from "../components/layout/Layout";
 import { styled } from "gatsby-theme-stitches/src/config";
+import ProgrammerFragment = Queries.ProgrammerFragment;
 
 interface ProgrammerPageProps {
   data: {
-    contentfulPage: IProgrammer;
+    contentfulPage: ProgrammerFragment;
   };
 }
 
@@ -19,7 +18,7 @@ const ProgrammerPage = ({
   return (
     <Layout>
       <ProgrammerWrapper>
-        <GatsbyImage alt={programmerDetail.name} image={image} />
+        <GatsbyImage alt={programmerDetail.name as string} image={image} />
         <VStack>
           <TextWrapper>
             <span className="label">name: </span>
@@ -72,20 +71,20 @@ const TextWrapper = styled("div", {
   },
 });
 
-export const query = graphql`
-  query ContentfulQuery($id: String) {
-    contentfulPage(id: { eq: $id }) {
-      id
-      link
-      url
-      name
-      mainLanguage
-      description
-      image {
-        gatsbyImage(width: 300, height: 300)
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query ContentfulQuery($id: String) {
+//     contentfulPage(id: { eq: $id }) {
+//       id
+//       link
+//       url
+//       name
+//       mainLanguage
+//       description
+//       image {
+//         gatsbyImage(width: 300, height: 300)
+//       }
+//     }
+//   }
+// `;
 
 export default ProgrammerPage;

@@ -1,18 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { IProgrammer } from "../types/programmer";
+import ProgrammerFragment = Queries.ProgrammerFragment;
 
-export const useProgrammerListQuery = (): IProgrammer[] => {
+export const useProgrammerListQuery = (): ProgrammerFragment[] => {
   const {
     allContentfulPage: { nodes },
   } = useStaticQuery(graphql`
     query ProgrammerListQuery {
       allContentfulPage {
         nodes {
-          id
-          name
-          image {
-            gatsbyImage(width: 200, height: 200)
-          }
+          ...Programmer
         }
       }
     }
