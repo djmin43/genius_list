@@ -1,14 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
-import ProgrammerFragment = Queries.ProgrammerFragment;
 
-export const useProgrammerListQuery = (): ProgrammerFragment[] => {
+export const useProgrammerListQuery = () => {
   const {
     allContentfulPage: { nodes },
   } = useStaticQuery(graphql`
     query ProgrammerListQuery {
       allContentfulPage {
         nodes {
-          ...Programmer
+          ...ProgrammerDetailFragment
         }
       }
     }

@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 
 export const programmerFragment = graphql`
-  fragment ProgrammerFragment on ContentfulPage {
+  fragment ProgrammerDetailFragment on ContentfulPage {
     id
     link
     url

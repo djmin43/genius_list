@@ -2,11 +2,11 @@ import React from "react";
 import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Layout from "../components/layout/Layout";
 import { styled } from "gatsby-theme-stitches/src/config";
-import ProgrammerFragment = Queries.ProgrammerFragment;
+import { graphql } from "gatsby";
 
 interface ProgrammerPageProps {
   data: {
-    contentfulPage: ProgrammerFragment;
+    contentfulPage: ProgrammerDetailFragment;
   };
 }
 

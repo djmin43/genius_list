@@ -1,8 +1,0 @@
-interface Test {
-    id: String
-    link: String
-    url: String
-    name: String
-    mainLanguage: String
-    description: String
-}
