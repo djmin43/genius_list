@@ -7,7 +7,7 @@ export const useProgrammerListQuery = () => {
     query ProgrammerListQuery {
       allContentfulPage {
         nodes {
-          ...ProgrammerDetailFragment
+            ...ProgrammerDetail
         }
       }
     }

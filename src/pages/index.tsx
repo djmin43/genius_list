@@ -4,9 +4,10 @@ import { useProgrammerListQuery } from "../hooks/useProgrammerListQuery";
 import SmallCard from "../components/common/SmallCard";
 import { styled } from "@stitches/react";
 import { Link } from "gatsby";
+import ProgrammerDetailFragment = Queries.ProgrammerDetailFragment;
 
 const IndexPage = () => {
-  const programmersList = useProgrammerListQuery();
+  const programmersList: ProgrammerDetailFragment[] = useProgrammerListQuery();
   return (
     <Layout>
       <ProgrammerWrapper>

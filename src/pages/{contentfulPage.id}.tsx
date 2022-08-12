@@ -1,8 +1,9 @@
 import React from "react";
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
 import Layout from "../components/layout/Layout";
-import { styled } from "gatsby-theme-stitches/src/config";
-import { graphql } from "gatsby";
+import {styled} from "gatsby-theme-stitches/src/config";
+import ProgrammerDetailFragment = Queries.ProgrammerDetailFragment;
+import {graphql} from "gatsby";
 
 interface ProgrammerPageProps {
   data: {
@@ -71,20 +72,12 @@ const TextWrapper = styled("div", {
   },
 });
 
-// export const query = graphql`
-//   query ContentfulQuery($id: String) {
-//     contentfulPage(id: { eq: $id }) {
-//       id
-//       link
-//       url
-//       name
-//       mainLanguage
-//       description
-//       image {
-//         gatsbyImage(width: 300, height: 300)
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query ContentfulQuery($id: String) {
+    contentfulPage(id: { eq: $id }) {
+      ...ProgrammerDetail
+    }
+  }
+`;
 
 export default ProgrammerPage;

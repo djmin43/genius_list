@@ -1,10 +1,10 @@
 import React from "react";
-import { styled } from "gatsby-theme-stitches/src/config";
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
-import ProgrammerFragmentFragment = Queries.ProgrammerFragmentFragment;
+import {styled} from "gatsby-theme-stitches/src/config";
+import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
+import ProgrammerDetailFragment = Queries.ProgrammerDetailFragment;
 
 interface CardProps {
-  programmerData: ProgrammerFragmentFragment;
+  programmerData: ProgrammerDetailFragment;
 }
 
 const SmallCard = ({ programmerData }: CardProps) => {
